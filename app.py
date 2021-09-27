@@ -13,7 +13,14 @@ def sobre():
 
 @app.route("/cliente/<cliente>")
 def mostra_cliente(cliente):
-    return f'{escape(cliente)}'
+    return f'<h1>{cliente}</h1>'
+
+@app.route("/hash/<senha>")
+def hash_da_senha(senha):
+    def fazer_hash_da_senha(senha):
+        # faz hash da senha e armazena na propria variavel senha
+        return senha
+    return '{ "hash": "%s" }' % senha
 
 if __name__ == "__main__":
     app.run(debug=True)
