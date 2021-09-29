@@ -15,5 +15,6 @@ while(True):
     while(True):
         mensagem = con.recv(1024)
         print(cliente, mensagem)
+    con.close()
 
 con.close()
