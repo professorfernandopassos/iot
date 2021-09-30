@@ -1,5 +1,9 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
+# import http.server
+
+# http.server.BaseHTTPRequestHandler(request, client_address, server)
+
 HOST = 'localhost'
 PORT = 5000
 
