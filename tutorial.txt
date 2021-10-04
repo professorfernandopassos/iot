@@ -1,0 +1,26 @@
+md exemplo-python # (mkdir)
+cd exemplo-python
+pip install virtualenv
+python -m venv venv
+.\venv\Scripts\activate.bat
+
+pip install flask
+pip install paho-mqtt
+
+pip freeze > requirements.txt
+
+# No outro ambiente
+
+pip install -r requirements.txt
+
+# "Giteando"
+
+git init
+echo "" > .gitignore
+
+# Edita o .gitignore adicionando o venv
+
+
+git branch -M main
+git remote add origin git@github.com:professorfernandopassos/exemplopython.git
+git push -u origin main

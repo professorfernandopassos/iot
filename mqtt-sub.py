@@ -1,8 +1,8 @@
 import paho.mqtt.client as mqtt
-import time
+# import time
 import json
 
-client = mqtt.Client(client_id='devpy')
+client = mqtt.Client(client_id='sub-py')
 
 client.connect('localhost', port=1883)
 client.subscribe('casa/sala/lampada/1')
@@ -19,6 +19,7 @@ def on_message_callback(client, userdata, message):
     elif(msg["status"] == False):
         # Desliga pino do raspberry / arduino
         print("Pino X desligado")
+
 
     # if(msg["value"]):
         # Lampada na intensidade x
